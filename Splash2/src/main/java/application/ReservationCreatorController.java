@@ -19,6 +19,7 @@ import models.Reservation;
 
 /**
  * A foglalások létrehozásáért felelõs osztály.
+ * 
  * @author Krisz
  *
  */
@@ -54,6 +55,10 @@ public class ReservationCreatorController {
 		scene.getStylesheets().add("application/application.css");
 		stage.setScene(scene);
 	}
+
+	/**
+	 * Az eddigi foglalások betöltése a 25 méteres medencében.
+	 */
 
 	@FXML
 	public void load25() {
@@ -175,6 +180,10 @@ public class ReservationCreatorController {
 		}
 	}
 
+	/**
+	 * Az eddigi foglalások betöltése a 50 méteres medencében.
+	 */
+
 	@FXML
 	public void load50() {
 		RC5000.setStyle("-fx-background-color: green");
@@ -294,6 +303,12 @@ public class ReservationCreatorController {
 		}
 	}
 
+	/**
+	 * 
+	 * A lefoglalandó / kitörlendõ pályák adatainak foglalására szolgáló metódus.
+	 * 
+	 */
+
 	@FXML
 	public void collect(ActionEvent event) throws IOException {
 
@@ -318,6 +333,10 @@ public class ReservationCreatorController {
 
 	}
 
+	/**
+	 * Az árak számítását végzõ metódus az 50 méteres medencéhez.
+	 */
+
 	@FXML
 	public void calculate50() {
 		Integer sum = 0;
@@ -327,24 +346,17 @@ public class ReservationCreatorController {
 		}
 		String a = CB50.getValue();
 		System.out.println(sum);
-		switch (a) {
-		case "Felnott":
-			price = sum * 1000;
-			break;
-		case "Diak":
-			price = sum * 500;
-			break;
-		case "Nyugdijas":
-			price = sum * 500;
-			break;
-		case "Gyerek":
-			price = 0;
+		price = priceCalculator(a, sum);
 
-		}
+		
 		String stringPrice = price.toString();
 		priceLabel50.setText(stringPrice + "Ft");
 
 	}
+
+	/**
+	 * Az árak számítását végzõ metódus a 25 méteres medencéhez.
+	 */
 
 	@FXML
 	public void calculate25() {
@@ -355,20 +367,8 @@ public class ReservationCreatorController {
 		}
 		String a = CB25.getValue();
 		System.out.println(sum);
-		switch (a) {
-		case "Felnott":
-			price = sum * 1000;
-			break;
-		case "Diak":
-			price = sum * 500;
-			break;
-		case "Nyugdijas":
-			price = sum * 500;
-			break;
-		case "Gyerek":
-			price = 0;
+		price = priceCalculator(a, sum);
 
-		}
 		String stringPrice = price.toString();
 		priceLabel25.setText(stringPrice + "Ft");
 
@@ -462,6 +462,21 @@ public class ReservationCreatorController {
 		RC50DatePicker.setValue(today);
 		load25();
 		load50();
+	}
+
+	public Integer priceCalculator(String value, int sum) {
+		switch (value) {
+		case "Felnott":
+			return sum * 1000;
+		case "Diak":
+			return sum * 500;
+		case "Nyugdijas":
+			return sum * 500;
+		case "Gyerek":
+			return 0;
+		}
+
+		return sum * 1000;
 	}
 
 }

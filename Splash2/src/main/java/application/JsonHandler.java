@@ -11,6 +11,7 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import models.Reservation;
 
@@ -86,7 +87,7 @@ public class JsonHandler {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		} catch (org.json.simple.parser.ParseException e) {
+		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		return reservations;
