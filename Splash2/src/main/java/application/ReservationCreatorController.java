@@ -17,6 +17,12 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import models.Reservation;
 
+/**
+ * A foglalások létrehozásáért felelõs osztály.
+ * @author Krisz
+ *
+ */
+
 public class ReservationCreatorController {
 
 	List<Reservation> selectedReservations = new ArrayList<Reservation>();
@@ -24,11 +30,10 @@ public class ReservationCreatorController {
 	String date25 = "";
 	String date50 = "";
 	LocalDate today = LocalDate.now();
-//	int dateFail25,dateFail50;
 
 	@FXML
 	private Button btn_vissza;
-	public Label priceLabel25, priceLabel50,warning25,warning50;
+	public Label priceLabel25, priceLabel50, warning25, warning50;
 	public DatePicker RC25DatePicker, RC50DatePicker;
 	public ChoiceBox<String> CB50, CB25;
 	public Button Reservation2500, Reservation2510, Reservation2520, Reservation2530, Reservation2501, Reservation2511,
@@ -76,7 +81,7 @@ public class ReservationCreatorController {
 		RC2533.setStyle("-fx-background-color: green");
 		RC2534.setStyle("-fx-background-color: green");
 		RC2535.setStyle("-fx-background-color: green");
-        
+
 		String id25 = "";
 		Integer ev25 = RC25DatePicker.getValue().getYear();
 		Integer honap25 = RC25DatePicker.getValue().getMonthValue();
@@ -89,11 +94,7 @@ public class ReservationCreatorController {
 
 			if (reservation.getDate().equals(date25)) {
 				id25 = "RC" + reservation.getPoolId() + reservation.getLane() + reservation.getTime();
-				System.out.println(id25);
 
-				System.out.println(date25);
-				System.out.println(reservation.getDate());
-				// System.out.println(date50);
 				if (reservation.getDate().equals(date25)) {
 					switch (id25) {
 					case "RC2500":
@@ -206,7 +207,6 @@ public class ReservationCreatorController {
 		Integer honap50 = RC50DatePicker.getValue().getMonthValue();
 		Integer nap50 = RC50DatePicker.getValue().getDayOfMonth();
 		date50 = ev50.toString() + honap50.toString() + nap50.toString();
-		System.out.println("Date50:"  + date50);
 
 		JsonHandler handler = new JsonHandler();
 		list = handler.read();
@@ -214,11 +214,6 @@ public class ReservationCreatorController {
 
 			if (reservation.getDate().equals(date50)) {
 				id50 = "RC" + reservation.getPoolId() + reservation.getLane() + reservation.getTime();
-				System.out.println(id50);
-
-				System.out.println(date50);
-				System.out.println(reservation.getDate());
-				// System.out.println(date50);
 				if (reservation.getDate().equals(date50)) {
 					switch (id50) {
 					case "RC5000":
@@ -301,47 +296,27 @@ public class ReservationCreatorController {
 
 	@FXML
 	public void collect(ActionEvent event) throws IOException {
-//		warning25.setText("");
-//		warning50.setText("");
+
 		Button button = (Button) event.getSource();
 		String title = button.getId();
-		System.out.println(title);
-		// if (button.getStyle().equals("-fx-background-color: red;")) {
-		// System.out.println("nem foglalhato");
-		// }else{
 		String pool_id, date, lane_id, time;
 		pool_id = title.substring(2, 4);
-		System.out.println(pool_id);
-		if(pool_id.equals("25")) {
-			date = date25;	
-		}else {
+		if (pool_id.equals("25")) {
+			date = date25;
+		} else {
 			date = date50;
 		}
-				
+
 		lane_id = title.substring(4, 5);
-		System.out.println(lane_id);
 		time = title.substring(5, 6);
-		System.out.println(time);
-		
-			
-		
-//			if(RC25DatePicker.getValue().isBefore(today)) {
-////				warning25.setText("A datum multbeli");
-//				dateFail25 = 1;
-////				warning50.setText("A datum multbeli");
-//				
-//		}else {
-			
+
 		button.setStyle("-fx-background-color: blue");
 
 		Reservation reservation = new Reservation(pool_id, date, lane_id, time);
 
-		
-		
 		selectedReservations.add(reservation);
 
-		 }
-	
+	}
 
 	@FXML
 	public void calculate50() {
@@ -402,7 +377,6 @@ public class ReservationCreatorController {
 	@FXML
 	public void reserve25(ActionEvent event) throws IOException {
 		warning25.setText("");
-		System.out.println("Reservation25");
 		int fail = 0;
 		JsonHandler handler = new JsonHandler();
 		for (Reservation reservation : list) {
@@ -413,7 +387,7 @@ public class ReservationCreatorController {
 			}
 		}
 		if (fail > 0) {
-			warning25.setText("Egy vagy tï¿½bb mezï¿½ mï¿½r foglalt!");
+			warning25.setText("Egy vagy tobb mezo mar foglalt!");
 			selectedReservations = new ArrayList<Reservation>();
 			load25();
 		} else {
@@ -429,7 +403,6 @@ public class ReservationCreatorController {
 	@FXML
 	public void reserve50(ActionEvent event) throws IOException {
 		warning50.setText("");
-//		System.out.println("Reservation50");
 		int fail = 0;
 		JsonHandler handler = new JsonHandler();
 		for (Reservation reservation : list) {
@@ -444,7 +417,6 @@ public class ReservationCreatorController {
 			selectedReservations = new ArrayList<Reservation>();
 			load50();
 		} else {
-//			System.out.println("Reservation52");
 
 			list.addAll(selectedReservations);
 			calculate50();
@@ -454,15 +426,11 @@ public class ReservationCreatorController {
 		}
 	}
 
-	
-
 	@FXML
 	public void delete25(ActionEvent event) throws IOException {
 		JsonHandler handler = new JsonHandler();
-//		System.out.println(list + "torles elott");
 		list.removeAll(selectedReservations);
 		handler.jWrite(list);
-//		System.out.println(list + "torles utan");
 		selectedReservations = new ArrayList<Reservation>();
 		load25();
 
@@ -471,10 +439,8 @@ public class ReservationCreatorController {
 	@FXML
 	public void delete50(ActionEvent event) throws IOException {
 		JsonHandler handler = new JsonHandler();
-//		System.out.println(list + "torles elott");
 		list.removeAll(selectedReservations);
 		handler.jWrite(list);
-//		System.out.println(list + "torles utan");
 		selectedReservations = new ArrayList<Reservation>();
 		load50();
 

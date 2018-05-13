@@ -80,11 +80,6 @@ public class ReservationsController {
 
 			if (reservation.getDate().equals(date25)) {
 				id25 = "Reservation" + reservation.getPoolId() + reservation.getLane() + reservation.getTime();
-				System.out.println(id25);
-
-				System.out.println(date25);
-				System.out.println(reservation.getDate());
-				// System.out.println(date50);
 				if (reservation.getDate().equals(date25)) {
 					switch (id25) {
 					case "Reservation2500":
@@ -197,15 +192,10 @@ public class ReservationsController {
 		Integer nap50 = date50.getValue().getDayOfMonth();
 		String date50 = ev50.toString() + honap50.toString() + nap50.toString();
 
-		// System.out.println(date50);
 		JsonHandler handler = new JsonHandler();
 		List<Reservation> list = handler.read();
 		for (Reservation reservation : list) {
 			id50 = "Reservation" + reservation.getPoolId() + reservation.getLane() + reservation.getTime();
-			System.out.println(id50);
-
-			System.out.println(reservation.getDate());
-			// System.out.println(date50);
 			if (reservation.getDate().equals(date50)) {
 
 				switch (id50) {

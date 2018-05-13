@@ -28,8 +28,6 @@ public class MainPageController {
         scene.getStylesheets().add("application/application.css");
         stage.setScene(scene);
         
-//        JsonHandler handler = new JsonHandler();
-//        handler.write();
 }
     
     @FXML

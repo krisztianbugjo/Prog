@@ -14,8 +14,17 @@ import org.json.simple.parser.JSONParser;
 
 import models.Reservation;
 
-public class JsonHandler {
+/**
+ * 
+ *A fájl módosítását vezénylõ metódus.
+ */
 
+public class JsonHandler {
+	
+/**
+ * 
+ * A fájl írását lebonyolító metódus.
+ */
 	public void jWrite(List<Reservation> list) {
 		JSONObject MainObj = new JSONObject();
 		JSONArray JsonList = new JSONArray();
@@ -40,9 +49,13 @@ public class JsonHandler {
 			e.printStackTrace();
 		}
 
-//		System.out.print(MainObj);
 
 	}
+	
+	/**
+	 * 
+	 * A fájl olvasását lebonyolító metódus.
+	 */
 
 	public List<Reservation> read() {
 		JSONParser parser = new JSONParser();

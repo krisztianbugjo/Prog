@@ -87,7 +87,7 @@
                         <Label layoutX="33.0" layoutY="263.0" text="Fizetendő:" underline="true" />
                         <Label fx:id="priceLabel25" layoutX="117.0" layoutY="263.0" />
                         <Label layoutX="19.0" layoutY="139.0" text="Válasszon jegytípust!" underline="true" />
-                        <Label fx:id="warning25" layoutX="22.0" layoutY="221.0" prefHeight="17.0" prefWidth="8.0" textFill="RED">
+                        <Label fx:id="warning25" layoutX="22.0" layoutY="221.0" prefHeight="17.0" prefWidth="0.0" textFill="RED">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font>
