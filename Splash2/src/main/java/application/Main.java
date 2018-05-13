@@ -17,7 +17,7 @@ Parent root = FXMLLoader.load(getClass().getResource("../views/mainPage.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("application/application.css");
         
-        stage.setTitle("Splash 0.1-alpha");
+        stage.setTitle("Splash");
         stage.setScene(scene);
         
         stage.show();

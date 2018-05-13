@@ -24,10 +24,11 @@ public class ReservationCreatorController {
 	String date25 = "";
 	String date50 = "";
 	LocalDate today = LocalDate.now();
+//	int dateFail25,dateFail50;
 
 	@FXML
 	private Button btn_vissza;
-	public Label priceLabel25, priceLabel50;
+	public Label priceLabel25, priceLabel50,warning25,warning50;
 	public DatePicker RC25DatePicker, RC50DatePicker;
 	public ChoiceBox<String> CB50, CB25;
 	public Button Reservation2500, Reservation2510, Reservation2520, Reservation2530, Reservation2501, Reservation2511,
@@ -96,76 +97,76 @@ public class ReservationCreatorController {
 				if (reservation.getDate().equals(date25)) {
 					switch (id25) {
 					case "RC2500":
-						RC2500.setStyle("-fx-background-color: red;");
+						RC2500.setStyle("-fx-background-color: red");
 						break;
 					case "RC2501":
-						RC2501.setStyle("-fx-background-color: red;");
+						RC2501.setStyle("-fx-background-color: red");
 						break;
 					case "RC2502":
-						RC2502.setStyle("-fx-background-color: red;");
+						RC2502.setStyle("-fx-background-color: red");
 						break;
 					case "RC2503":
-						RC2503.setStyle("-fx-background-color: red;");
+						RC2503.setStyle("-fx-background-color: red");
 						break;
 					case "RC2504":
-						RC2504.setStyle("-fx-background-color: red;");
+						RC2504.setStyle("-fx-background-color: red");
 						break;
 					case "RC2505":
-						RC2505.setStyle("-fx-background-color: red;");
+						RC2505.setStyle("-fx-background-color: red");
 						break;
 					case "RC2510":
-						RC2510.setStyle("-fx-background-color: red;");
+						RC2510.setStyle("-fx-background-color: red");
 						break;
 					case "RC2511":
-						RC2511.setStyle("-fx-background-color: red;");
+						RC2511.setStyle("-fx-background-color: red");
 						break;
 					case "RC2512":
-						RC2512.setStyle("-fx-background-color: red;");
+						RC2512.setStyle("-fx-background-color: red");
 						break;
 					case "RC2513":
-						RC2513.setStyle("-fx-background-color: red;");
+						RC2513.setStyle("-fx-background-color: red");
 						break;
 					case "RC2514":
-						RC2514.setStyle("-fx-background-color: red;");
+						RC2514.setStyle("-fx-background-color: red");
 						break;
 					case "RC2515":
-						RC2515.setStyle("-fx-background-color: red;");
+						RC2515.setStyle("-fx-background-color: red");
 						break;
 					case "RC2520":
-						RC2520.setStyle("-fx-background-color: red;");
+						RC2520.setStyle("-fx-background-color: red");
 						break;
 					case "RC2521":
-						RC2521.setStyle("-fx-background-color: red;");
+						RC2521.setStyle("-fx-background-color: red");
 						break;
 					case "RC2522":
-						RC2522.setStyle("-fx-background-color: red;");
+						RC2522.setStyle("-fx-background-color: red");
 						break;
 					case "RC2523":
-						RC2523.setStyle("-fx-background-color: red;");
+						RC2523.setStyle("-fx-background-color: red");
 						break;
 					case "RC2524":
-						RC2524.setStyle("-fx-background-color: red;");
+						RC2524.setStyle("-fx-background-color: red");
 						break;
 					case "RC2525":
-						RC2525.setStyle("-fx-background-color: red;");
+						RC2525.setStyle("-fx-background-color: red");
 						break;
 					case "RC2530":
-						RC2530.setStyle("-fx-background-color: red;");
+						RC2530.setStyle("-fx-background-color: red");
 						break;
 					case "RC2531":
-						RC2531.setStyle("-fx-background-color: red;");
+						RC2531.setStyle("-fx-background-color: red");
 						break;
 					case "RC2532":
-						RC2532.setStyle("-fx-background-color: red;");
+						RC2532.setStyle("-fx-background-color: red");
 						break;
 					case "RC2533":
-						RC2533.setStyle("-fx-background-color: red;");
+						RC2533.setStyle("-fx-background-color: red");
 						break;
 					case "RC2534":
-						RC2534.setStyle("-fx-background-color: red;");
+						RC2534.setStyle("-fx-background-color: red");
 						break;
 					case "RC2535":
-						RC2535.setStyle("-fx-background-color: red;");
+						RC2535.setStyle("-fx-background-color: red");
 						break;
 					}
 				}
@@ -221,76 +222,76 @@ public class ReservationCreatorController {
 				if (reservation.getDate().equals(date50)) {
 					switch (id50) {
 					case "RC5000":
-						RC5000.setStyle("-fx-background-color: red;");
+						RC5000.setStyle("-fx-background-color: red");
 						break;
 					case "RC5001":
-						RC5001.setStyle("-fx-background-color: red;");
+						RC5001.setStyle("-fx-background-color: red");
 						break;
 					case "RC5002":
-						RC5002.setStyle("-fx-background-color: red;");
+						RC5002.setStyle("-fx-background-color: red");
 						break;
 					case "RC5003":
-						RC5003.setStyle("-fx-background-color: red;");
+						RC5003.setStyle("-fx-background-color: red");
 						break;
 					case "RC5004":
-						RC5004.setStyle("-fx-background-color: red;");
+						RC5004.setStyle("-fx-background-color: red");
 						break;
 					case "RC5005":
-						RC5005.setStyle("-fx-background-color: red;");
+						RC5005.setStyle("-fx-background-color: red");
 						break;
 					case "RC5010":
-						RC5010.setStyle("-fx-background-color: red;");
+						RC5010.setStyle("-fx-background-color: red");
 						break;
 					case "RC5011":
-						RC5011.setStyle("-fx-background-color: red;");
+						RC5011.setStyle("-fx-background-color: red");
 						break;
 					case "RC5012":
-						RC5012.setStyle("-fx-background-color: red;");
+						RC5012.setStyle("-fx-background-color: red");
 						break;
 					case "RC5013":
-						RC5013.setStyle("-fx-background-color: red;");
+						RC5013.setStyle("-fx-background-color: red");
 						break;
 					case "RC5014":
-						RC5014.setStyle("-fx-background-color: red;");
+						RC5014.setStyle("-fx-background-color: red");
 						break;
 					case "RC5015":
-						RC5015.setStyle("-fx-background-color: red;");
+						RC5015.setStyle("-fx-background-color: red");
 						break;
 					case "RC5020":
-						RC5020.setStyle("-fx-background-color: red;");
+						RC5020.setStyle("-fx-background-color: red");
 						break;
 					case "RC5021":
-						RC5021.setStyle("-fx-background-color: red;");
+						RC5021.setStyle("-fx-background-color: red");
 						break;
 					case "RC5022":
-						RC5022.setStyle("-fx-background-color: red;");
+						RC5022.setStyle("-fx-background-color: red");
 						break;
 					case "RC5023":
-						RC5023.setStyle("-fx-background-color: red;");
+						RC5023.setStyle("-fx-background-color: red");
 						break;
 					case "RC5024":
-						RC5024.setStyle("-fx-background-color: red;");
+						RC5024.setStyle("-fx-background-color: red");
 						break;
 					case "RC5025":
-						RC5025.setStyle("-fx-background-color: red;");
+						RC5025.setStyle("-fx-background-color: red");
 						break;
 					case "RC5030":
-						RC5030.setStyle("-fx-background-color: red;");
+						RC5030.setStyle("-fx-background-color: red");
 						break;
 					case "RC5031":
-						RC5031.setStyle("-fx-background-color: red;");
+						RC5031.setStyle("-fx-background-color: red");
 						break;
 					case "RC5032":
-						RC5032.setStyle("-fx-background-color: red;");
+						RC5032.setStyle("-fx-background-color: red");
 						break;
 					case "RC5033":
-						RC5033.setStyle("-fx-background-color: red;");
+						RC5033.setStyle("-fx-background-color: red");
 						break;
 					case "RC5034":
-						RC5034.setStyle("-fx-background-color: red;");
+						RC5034.setStyle("-fx-background-color: red");
 						break;
 					case "RC5035":
-						RC5035.setStyle("-fx-background-color: red;");
+						RC5035.setStyle("-fx-background-color: red");
 						break;
 					}
 				}
@@ -300,11 +301,13 @@ public class ReservationCreatorController {
 
 	@FXML
 	public void collect(ActionEvent event) throws IOException {
+//		warning25.setText("");
+//		warning50.setText("");
 		Button button = (Button) event.getSource();
 		String title = button.getId();
 		System.out.println(title);
 		// if (button.getStyle().equals("-fx-background-color: red;")) {
-		// System.out.println("nem foglalható");
+		// System.out.println("nem foglalhato");
 		// }else{
 		String pool_id, date, lane_id, time;
 		pool_id = title.substring(2, 4);
@@ -314,20 +317,31 @@ public class ReservationCreatorController {
 		}else {
 			date = date50;
 		}
-		
+				
 		lane_id = title.substring(4, 5);
 		System.out.println(lane_id);
 		time = title.substring(5, 6);
 		System.out.println(time);
-
-		button.setStyle("-fx-background-color: blue;");
+		
+			
+		
+//			if(RC25DatePicker.getValue().isBefore(today)) {
+////				warning25.setText("A datum multbeli");
+//				dateFail25 = 1;
+////				warning50.setText("A datum multbeli");
+//				
+//		}else {
+			
+		button.setStyle("-fx-background-color: blue");
 
 		Reservation reservation = new Reservation(pool_id, date, lane_id, time);
 
+		
+		
 		selectedReservations.add(reservation);
 
-		// }
-	}
+		 }
+	
 
 	@FXML
 	public void calculate50() {
@@ -339,13 +353,13 @@ public class ReservationCreatorController {
 		String a = CB50.getValue();
 		System.out.println(sum);
 		switch (a) {
-		case "Felnõtt":
+		case "Felnott":
 			price = sum * 1000;
 			break;
-		case "Diák":
+		case "Diak":
 			price = sum * 500;
 			break;
-		case "Nyugdíjas":
+		case "Nyugdijas":
 			price = sum * 500;
 			break;
 		case "Gyerek":
@@ -367,13 +381,13 @@ public class ReservationCreatorController {
 		String a = CB25.getValue();
 		System.out.println(sum);
 		switch (a) {
-		case "Felnõtt":
+		case "Felnott":
 			price = sum * 1000;
 			break;
-		case "Diák":
+		case "Diak":
 			price = sum * 500;
 			break;
-		case "Nyugdíjas":
+		case "Nyugdijas":
 			price = sum * 500;
 			break;
 		case "Gyerek":
@@ -387,6 +401,7 @@ public class ReservationCreatorController {
 
 	@FXML
 	public void reserve25(ActionEvent event) throws IOException {
+		warning25.setText("");
 		System.out.println("Reservation25");
 		int fail = 0;
 		JsonHandler handler = new JsonHandler();
@@ -398,7 +413,7 @@ public class ReservationCreatorController {
 			}
 		}
 		if (fail > 0) {
-			System.out.println("egy vagy több mezõ már foglalt");
+			warning25.setText("Egy vagy tï¿½bb mezï¿½ mï¿½r foglalt!");
 			selectedReservations = new ArrayList<Reservation>();
 			load25();
 		} else {
@@ -413,7 +428,8 @@ public class ReservationCreatorController {
 
 	@FXML
 	public void reserve50(ActionEvent event) throws IOException {
-		System.out.println("Reservation50");
+		warning50.setText("");
+//		System.out.println("Reservation50");
 		int fail = 0;
 		JsonHandler handler = new JsonHandler();
 		for (Reservation reservation : list) {
@@ -424,11 +440,11 @@ public class ReservationCreatorController {
 			}
 		}
 		if (fail > 0) {
-			System.out.println("egy vagy több mezõ már foglalt");
+			warning50.setText("Egy vagy tobb mezo mar foglalt!");
 			selectedReservations = new ArrayList<Reservation>();
 			load50();
 		} else {
-			System.out.println("Reservation52");
+//			System.out.println("Reservation52");
 
 			list.addAll(selectedReservations);
 			calculate50();
@@ -443,10 +459,10 @@ public class ReservationCreatorController {
 	@FXML
 	public void delete25(ActionEvent event) throws IOException {
 		JsonHandler handler = new JsonHandler();
-		System.out.println(list + "törlés elõtt");
+//		System.out.println(list + "torles elott");
 		list.removeAll(selectedReservations);
 		handler.jWrite(list);
-		System.out.println(list + "törlés után");
+//		System.out.println(list + "torles utan");
 		selectedReservations = new ArrayList<Reservation>();
 		load25();
 
@@ -455,10 +471,10 @@ public class ReservationCreatorController {
 	@FXML
 	public void delete50(ActionEvent event) throws IOException {
 		JsonHandler handler = new JsonHandler();
-		System.out.println(list + "törlés elõtt");
+//		System.out.println(list + "torles elott");
 		list.removeAll(selectedReservations);
 		handler.jWrite(list);
-		System.out.println(list + "törlés után");
+//		System.out.println(list + "torles utan");
 		selectedReservations = new ArrayList<Reservation>();
 		load50();
 
@@ -466,18 +482,20 @@ public class ReservationCreatorController {
 
 	@FXML
 	public void initialize() {
-		CB50.getItems().add("Felnõtt");
+		CB50.getItems().add("Felnott");
 		CB50.getItems().add("Gyerek");
-		CB50.getItems().add("Nyugdíjas");
-		CB50.getItems().add("Diák");
-		CB50.setValue("Felnõtt");
-		CB25.getItems().add("Felnõtt");
+		CB50.getItems().add("Nyugdijas");
+		CB50.getItems().add("Diak");
+		CB50.setValue("Felnott");
+		CB25.getItems().add("Felnott");
 		CB25.getItems().add("Gyerek");
-		CB25.getItems().add("Nyugdíjas");
-		CB25.getItems().add("Diák");
-		CB25.setValue("Felnõtt");
+		CB25.getItems().add("Nyugdijas");
+		CB25.getItems().add("Diak");
+		CB25.setValue("Felnott");
 		RC25DatePicker.setValue(today);
 		RC50DatePicker.setValue(today);
+		load25();
+		load50();
 	}
 
 }

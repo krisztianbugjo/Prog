@@ -57,7 +57,7 @@
                               <Button fx:id="RC2500" mnemonicParsing="false" onAction="#collect" prefHeight="83.0" prefWidth="99.0" style="-fx-background-color: green;" text="00" textFill="#f0321100" />
                            </children>
                         </GridPane>
-                        <DatePicker fx:id="RC25DatePicker" layoutX="26.0" layoutY="166.0" onAction="#load25" />
+                        <DatePicker fx:id="RC25DatePicker" layoutX="15.0" layoutY="100.0" onAction="#load25" />
                         <Button fx:id="btn_vissza" layoutX="62.0" layoutY="496.0" mnemonicParsing="false" onAction="#vissza" prefHeight="25.0" prefWidth="111.0" text="Vissza" />
                         <Label layoutX="310.0" layoutY="26.0" text="1" />
                         <Label layoutX="386.0" layoutY="26.0" text="2" />
@@ -74,18 +74,24 @@
                         <Circle fill="DODGERBLUE" layoutX="47.0" layoutY="385.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: red;" />
                         <Label layoutX="99.0" layoutY="313.0" text="Szabad" />
                         <Label layoutX="99.0" layoutY="377.0" text="Foglalt" />
-                        <Label layoutX="26.0" layoutY="140.0" text="Válasszon dátumot!" underline="true" />
+                        <Label layoutX="20.0" layoutY="75.0" text="Válasszon dátumot!" underline="true" />
                         <Label layoutX="217.0" layoutY="50.0" text="Időpont" underline="true" />
-                        <Label layoutX="26.0" layoutY="35.0" prefHeight="64.0" prefWidth="124.0" text="25 Méteres">
+                        <Label layoutX="10.0" layoutY="11.0" prefHeight="64.0" prefWidth="124.0" text="25 Méteres">
                            <font>
                               <Font name="System Italic" size="25.0" />
                            </font>
                         </Label>
                         <Button fx:id="btn_foglalas" layoutX="42.0" layoutY="449.0" mnemonicParsing="false" onAction="#reserve25" prefHeight="25.0" prefWidth="60.0" text="Foglalás" />
                         <Button fx:id="btn_delete" layoutX="130.0" layoutY="449.0" mnemonicParsing="false" onAction="#delete25" prefHeight="25.0" prefWidth="60.0" text="Törlés" />
-                        <ChoiceBox fx:id="CB25" layoutX="38.0" layoutY="217.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="CB25" layoutX="13.0" layoutY="166.0" prefWidth="150.0" />
                         <Label layoutX="33.0" layoutY="263.0" text="Fizetendő:" underline="true" />
                         <Label fx:id="priceLabel25" layoutX="117.0" layoutY="263.0" />
+                        <Label layoutX="19.0" layoutY="139.0" text="Válasszon jegytípust!" underline="true" />
+                        <Label fx:id="warning25" layoutX="22.0" layoutY="221.0" prefHeight="17.0" prefWidth="8.0" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -135,7 +141,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                         </GridPane>
-                        <DatePicker fx:id="RC50DatePicker" layoutX="26.0" layoutY="166.0" onAction="#load50" />
+                        <DatePicker fx:id="RC50DatePicker" layoutX="15.0" layoutY="100.0" onAction="#load50" />
                         <Button fx:id="btn_vissza2" layoutX="62.0" layoutY="496.0" mnemonicParsing="false" onAction="#vissza" prefHeight="25.0" prefWidth="111.0" text="Vissza" />
                         <Label layoutX="310.0" layoutY="26.0" text="1" />
                         <Label layoutX="386.0" layoutY="26.0" text="2" />
@@ -152,18 +158,24 @@
                         <Circle fill="DODGERBLUE" layoutX="47.0" layoutY="385.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: red;" />
                         <Label layoutX="99.0" layoutY="313.0" text="Szabad" />
                         <Label layoutX="99.0" layoutY="377.0" text="Foglalt" />
-                        <Label layoutX="26.0" layoutY="140.0" text="Válasszon dátumot!" underline="true" />
+                        <Label layoutX="20.0" layoutY="75.0" text="Válasszon dátumot!" underline="true" />
                         <Label layoutX="217.0" layoutY="50.0" text="Időpont" underline="true" />
-                        <Label layoutX="26.0" layoutY="35.0" prefHeight="64.0" prefWidth="124.0" text="50 Méteres">
+                        <Label layoutX="10.0" layoutY="11.0" prefHeight="64.0" prefWidth="124.0" text="50 Méteres">
                            <font>
                               <Font name="System Italic" size="25.0" />
                            </font>
                         </Label>
                         <Button layoutX="42.0" layoutY="449.0" mnemonicParsing="false" onAction="#reserve50" prefHeight="25.0" prefWidth="60.0" text="Foglalás" />
                         <Button layoutX="130.0" layoutY="449.0" mnemonicParsing="false" onAction="#delete50" prefHeight="25.0" prefWidth="60.0" text="Törlés" />
-                        <ChoiceBox fx:id="CB50" layoutX="38.0" layoutY="217.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="CB50" layoutX="13.0" layoutY="166.0" prefWidth="150.0" />
                         <Label layoutX="33.0" layoutY="263.0" text="Fizetendő:" underline="true" />
                         <Label fx:id="priceLabel50" layoutX="117.0" layoutY="263.0" />
+                        <Label layoutX="19.0" layoutY="139.0" text="Válasszon jegytípust!" underline="true" />
+                        <Label fx:id="warning50" layoutX="22.0" layoutY="221.0" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </content>
